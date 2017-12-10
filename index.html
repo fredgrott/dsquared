@@ -1,0 +1,443 @@
+<!--
+      DSquared-OnePage Document Template,
+      An easy to use or almost automatic way to do one page docs that works in all browsers even on
+      mobile and switches from fixed on desktop to non fixed on mobile.
+      Author: Fred Grott @fredgrott
+      Version: 0.0.1
+      Browsers Compatability Matrix: MSIE(d and m), MS Edge(d and m), Google Chrome(d and m),
+                                     Opera(not mini), Mozilla FireFox(d and m), and
+                                     Apple Safari(d and m)
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- iphone-X notch adjustment has two parts:
+             Part One: viewport-fit=cover is ignored harmlessly by non-safari browsers but
+                       needed for Safari on iphone-x
+
+             Part Two: env padding adjustment see item 0 in style.css file
+
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="description" content="Award Winning Doc Template">
+    <meta name="author" content="Fred Grott">
+<meta name="robots" content="noindex, nofollow">
+
+
+    <title>DSquared-Doc template</title>
+
+    <!-- For MS Edge, Google's Chrome and Apple's Safari do not require this-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- prism grammars(components) can be set to load two ways via the autoloader plugin,
+         this way I am telling that plugin that the components subfolder is at root-->
+    <base href="" />
+
+    <!-- order is:
+                   1. fonts
+                   2. BSM
+                   3. 3rd party plugin css files
+                   4. site css style file
+    -->
+    <link href="assets/css/fonts.css"  rel="stylesheet"  >
+    <link href="assets/css/material-icons.css" rel="stylesheet" >
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/core/bootstrap-material-design.css" rel="stylesheet">
+    <!-- doc template specific -->
+    <link href="assets/css/vendors/tocbot/tocbot.css" rel="stylesheet">
+    <link href="assets/css/vendors/jstree/default/style.css" rel="stylesheet">
+    <!-- prism -->
+    <link href="assets/css/vendors/prism/prism.css" rel="stylesheet">
+    <link href="assets/css/vendors/prism/prism-okaidia.css" rel="stylesheet">
+    <link href="assets/css/vendors/prism/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/vendors/prism/prism-line-numbers.css" rel="stylesheet">
+    <link href="assets/css/vendors/prism/prism-toolbar.css" rel="stylesheet">
+    <link href="assets/css/vendors/prism/prism-unescaped-markup.css" rel="stylesheet">
+
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org markup goes here -->
+
+    <!-- Open Graph markup goes here -->
+    <!-- Twitter Card markup goes here -->
+
+
+  </head>
+  <!-- -->
+  <body data-spy="scroll" data-target="#toc">
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row dsquared-navbar sticky">
+      <a class="navbar-brand mr-0 mr-md-2" href="index.html" aria-label="DSquared">
+         <span class="dsquared">D</span><span class="squared">Squared</span>
+       </a>
+
+    </header><!-- ./navvbar -->
+    <div class="container-fluid">
+       <div class="row flex-xl-nowrap">
+         <div class="col-12 col-md-3 col-xl-2  " id="fixed-sidebar">
+           <!-- stickyfill polyfill requires a simple div wrapper, when implementing non
+               navbar elements such as a fixed sidebar-->
+           <div class="sticky doc-sidebar">
+           <!-- imperfect hack to deal with stickyfill polyfill quirks-->
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+          <!-- using display properties to creative hide and show hero stuff-->
+          <div class="hero-content  ">
+            <h1 class="hero-title mx-auto text-center d-md-none"><span class="dsquared-alt">D</span>Squared</h1>
+            <h3 class="hero-caption mx-auto text-center d-md-none ">Easy One Page Docs</h3>
+          </div>
+           <h4 class="toc-title">Table of Contents</h4>
+             <nav id="toc"   class=" our-toc "></nav>
+             <br/>
+             <br/>
+          </div>
+        </div><!-- ./   fixed-siddebar -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 " >
+          <!-- We want desktop and mobile similar, so we hide this on mobile
+               and display similar toc heading instead on mobile-->
+          <div class="hero-content  ">
+            <h1 class="hero-title mx-auto text-center d-none d-md-block"><span class="dsquared-alt">D</span>Squared</h1>
+            <h3 class="hero-caption mx-auto text-center d-none d-md-block">Easy One Page Docs</h3>
+          </div>
+          <br/>
+          <br/>
+          <div class="dsquared-content">
+            <section class="dsquared-features">
+              <h2 class="section-title mx-auto text-center">Features</h2>
+              <br/>
+              <!-- js-toc-ignore is the tocbot setting class that has been
+                   designated as the ignore this heading during toc generation, hence
+                   its use in the promo section -->
+              <div class="row">
+                <div class="col-lg-3 col-sm-12">
+                  <h3 class="feature-promo-title js-toc-ignore">Auto-Generated TOC</h3>
+                  <p class="promo-caption">Table of Contents is auto-generated based on the documents headings for the easiest pain-free way to creater web docs.</p>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                  <h3 class="feature-promo-title js-toc-ignore">Fixed Sidebar and Navbar</h3>
+                  <p class="promo-caption">MSIE compatible fixed siddebar and navbar that tranistions to non-fixed on mobile.</p>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                  <h3 class="feature-promo-title js-toc-ignore">JSTree File Structures</h3>
+                  <p class="promo-caption">Visual file structure dispalys using JSTree.</p>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                  <h3 class="feature-promo-title js-toc-ignore">API Code Formating-Highlighting</h3>
+                  <p class="promo-caption">Code friendly highlighting and formating when you have to document things for your firm's api that 3rd parties use.</p>
+                </div>
+              </div>
+            </section>
+            <section class="dsquared-setup">
+              <h2 class="section-title" id="dsquared-setup">SetUp</h2>
+              <p>DSquared is self-contained so that you can quickly prototype a one-page html document of an api or app. The fonts, js, and css files are in the assets sub-folder. The prism componenets that define code highlighting formating per language are in the components sub-folder. The same exact demo is the same exact layout so you can hit-the-ground running and create that one page web doucment in minutes following this demo example.</p>
+              <div id="dsquared-files">
+                   <ul class="list-unstyled">
+                      <li data-jstree='{ "selected" : false, "opened" : true }'>In Layouts
+                       <ul class="list-unstyled">
+                          <li>index.html</li>
+                          <li>favicons and favicon configs</li>
+                          <li data-jstree='{ "selected" : false, "opened" : true }'>assets
+                             <ul class="list-unstyled">
+                               <li>css</li>
+                               <li>fonts</li>
+                               <li>images</li>
+                               <li>js</li>
+                             </ul>
+                          </li>
+                        </ul>
+                     </li>
+                  </ul>
+             </div>
+             <br/>
+             <p>Just a simple copy and paste to where you will modify your one page web docs.</p>
+              <p>CDN urls of the components are listed in the last section so that you can fine tune according to your bandwidth performance requirements.</p>
+            </section>
+            <section class="dsquared-stickyfill">
+              <h2 class="section-title" id="dsquared-fxed-sidebar-navbar">Fixed Sidebar Navbar</h2>
+              <p>The Stickyfill polyfill works with all browsers even MSIE which is why its being used as I know a large portion of you still have those on MSIE browsers to support.</p>
+              <h3 id="stickyfill-init">Stickyfill init</h3>
+              <p>Its a simple setup, first initialize it in your init.js after you have imported the css and js files just like this docs example does:</p>
+              <p class="dsquared-code-lang-title">Javascript</p>
+              <pre ><code class="language-javascript line-numbers"  >
+                Stickyfill.add($('.sticky'));
+              </code></pre>
+              <h4 id="stickyfill-css">Stickyfill css</h4>
+              <p>We want two things with our stickyfill css setup. One, fixed on desktop for the navbar and sidebar. Two, both elements transition to non-fixed on mobile.</p>
+              <p class="dsquared-code-lang-title">CSS</p>
+              <pre><code class="language-css line-numbers">
+                .sticky {
+
+                    top: 0;
+                }
+                @media (min-width: 768px) {
+
+                      .sticky {
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 0;
+                        z-index: 1071; }
+                }
+                .sticky:before,
+                .sticky:after {
+                    content: '';
+                    display: table;
+                }
+
+              </code></pre>
+              <p>The sticky before and after are included as you might be doing fixed headers.</p>
+              <p>Because I wanted the TOC to be placed lower in the column, I add an extra css class besides just sticky:</p>
+              <p class="dsquared-code-lang-title">CSS</p>
+              <pre><code class="language-css line-numbers">
+                @media (min-width: 768px) {
+                  .doc-sidebar{
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: auto;
+                    z-index: 1071;
+                  }
+
+                }
+                </code></pre>
+                <p>And than I add some extra brs to the sidebar:</p>
+                <pre><code class="language-html line-numbers">
+                  &lt;div class="col-12 col-md-3 col-xl-2  " id="fixed-sidebar"&gt;
+
+                    &lt;div class="sticky doc-sidebar"&gt;
+
+                    &lt;br&#x2F; &gt;
+                    &lt;br&#x2F; &gt;
+                    &lt;br&#x2F; &gt;
+                    &lt;br&#x2F; &gt;
+
+                    &lt;h4 class="toc-title">Table of Contents&lt;&#x2F; h4&gt;
+                      &lt;nav id="toc"   class=" our-toc "&gt;&lt;&#x2F; nav&gt;
+                      &lt;br&#x2F; &gt;
+                      &lt;br&#x2F; &gt;
+                   &lt;&#x2F; div&gt;
+                 &lt;&#x2F; div&gt;
+               </code></pre>
+               <p>Now, let's find out how to do that cool auto-genrating TOC.  </p>
+
+            </section>
+            <section class="dsquared-tocbot">
+              <h2 class="section-title" id="dsquared-toc-gen">TOC Gen</h2>
+              <p>The sidebar TOC is generated automatically using the TocBot plugin.</p>
+              <p>First we add the our-toc class to our sidebar nav.Than we wrap our content in a div class called dsquared-content.</p>
+              <h3>Init Tocbot</h3>
+              <p>Now we initialize TocBot with our settings in init.js:</p>
+              <pre><code class="language-javascript line-numbers">
+                tocbot.init({
+
+                        tocSelector: '.our-toc',
+
+                        contentSelector: '.dsquared-content',
+
+                       headingSelector: 'h1, h2, h3,h4,h5,h6',
+
+                       collapseDepth: 6,
+                 });
+              </code></pre>
+              <p>Collapse depth refers to if you want it collapsed and to what level with 0 being collapse all and 6 collapse none.</p>
+              <p>One last step, go through and an id to all your toc headers as that nice highlight indicator will not work if its not set that way.</p>
+              <p>One last thing, see how my item margins are all nice and aligned? Sometimes in docs we do not follow the header must have a parent rule, we both do it infact. I did a hack to get the margins and that hack is:</p>
+              <pre><code class="language-css line-numbers">
+                .toc-list .toc-list .toc-list {
+                  padding-left: 0px;
+                }
+              </code></pre>
+              <p>Sometime later I will expand it work with more variations of that use case and update this theme.</p>
+            </section>
+            <section class="dsquared-jstree">
+              <h2 class="section-title" id="dsquared-jstree-visualization">Visualize File Trees</h2>
+              <p>For API documeents we can use JSTree plugin to show a visual of files such as you viewed earlier. You can embedded html or create a json to describe the structure to visualize. Let me show how to embedd the html.</p>
+              <p>First, it needs initialized with the name of our embedded html container:</p>
+              <pre><code class="language-javascript line-numbers">
+                $('#dsquared-files').jstree();
+              </code></pre>
+              <p>Than the embedded html right from the example you are reading:</p>
+              <pre><code class="language-html line-numbers">
+                &lt;div id="dsquared-files"&gt;
+                     &lt;ul class="list-unstyled"&gt;
+                        &lt;li data-jstree='{ "selected" : false, "opened" : true }'&gt;In Layouts
+                         &lt;ul class="list-unstyled"&gt;
+                            &lt;li&gt;index.html&lt;&#x2F; li&gt;
+                            &lt;li&gt;favicons and favicon configs&lt;/li&gt;
+                            &lt;li data-jstree='{ "selected" : false, "opened" : true }'&gt;assets
+                               &lt;ul class="list-unstyled"&gt;
+                                 &lt;li&gt;css&lt;&#x2F; li&gt;
+                                 &lt;li&gt;fonts&lt;&#x2F; li&gt;
+                                 &lt;li&gt;images&lt;&#x2F; li&gt;
+                                 &lt;li&gt;js&lt;&#x2F; li&gt;
+                               &lt;&#x2F; ul&gt;
+                            &lt;&#x2F; li&gt;
+                          &lt;&#x2F; ul&gt;
+                       &lt;&#x2F; li&gt;
+                    &lt;&#x2F; ul&gt;
+               &lt;&#x2F; div&gt;
+              </code></pre>
+              <p>And the visual, you will notice that for BS4 I have to set list as unstyled.</p>
+              <div id="dsquared-files-two">
+                   <ul class="list-unstyled">
+                      <li data-jstree='{ "selected" : false, "opened" : true }'>In Layouts
+                       <ul class="list-unstyled">
+                          <li>index.html</li>
+                          <li>favicons and favicon configs</li>
+                          <li data-jstree='{ "selected" : false, "opened" : true }'>assets
+                             <ul class="list-unstyled">
+                               <li>css</li>
+                               <li>fonts</li>
+                               <li>images</li>
+                               <li>js</li>
+                             </ul>
+                          </li>
+                        </ul>
+                     </li>
+                  </ul>
+             </div>
+             <br/>
+            </section>
+            <section class="dsquared-prism">
+              <h2 class="section-title" id="dsquared-prism-code-highlighting">Code Highlighting</h2>
+              <p>The display and highlighting of code is accomplished using the prism plugin. Unlike other plugins, once the css files and js files are imported in the html head section the plugin is than initialized automatically.</p>
+              <p>Using pre and code and some added prism css classes we can display code a nice visual way such as:</p>
+              <pre><code class="language-markup line-numbers" >
+                 &lt;pre &gt; &lt;code class="language-javascript line-numbers"  &gt;
+                  Stickyfill.add($('.sticky'));
+                 &lt;&#x2F; code&gt;&lt;&#x2F; pre&gt;
+              </code></pre>
+              <p>Becomes...</p>
+              <pre ><code class="language-javascript line-numbers"  >
+                Stickyfill.add($('.sticky'));
+              </code></pre>
+              <br/>
+            </section>
+            <section class="dsquared-cdns">
+              <h2 class="section-title">CDN Urls</h2>
+              <p>Not all the components of DSquared are CDN'd, but I do list those that are here so that you can fine-tune the bandwidth used.</p>
+              <h4 id="fonts">Fonts</h4>
+              <p>You can use Google's user device detection scheme and Font CDNs to decrease the bandwidth used by fonts</p>
+              <p>Roboto and Material Icons Fonts</p>
+              <pre><code>
+                 &lt;link href="https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"&gt;
+                 &lt;link href="https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet"&gt;
+                 &lt;link href="https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet"&gt;
+                 &lt;link href="https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"&gt;
+
+              </code></pre>
+              <br/>
+              <p>FontAweseom font</p>
+              <pre><code>
+                &lt;link href="https:&#x2F;&#x2F;maxcdn.bootstrapcdn.com&#x2F;font-awesome&#x2F;4.7.0&#x2F;css&#x2F;font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"&gt;
+              </code></pre>
+              <h4 id="bsm-core">BSM Core</h4>
+              <p>BSM css</p>
+              <pre><code>
+                &lt;link rel="stylesheet" href="https:&#x2F;&#x2F;unpkg.com&#x2F;bootstrap-material-design@4.0.0-beta.3&#x2F;dist&#x2F;css&#x2F;bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous"&gt;
+              </code></pre>
+              <p>BSM JS</p>
+              <pre><code>
+                &lt;script src="https:&#x2F;&#x2F;code.jquery.com&#x2F;jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"&gt;&lt;/script&gt;
+                &lt;script src="https:&#x2F;&#x2F;unpkg.com&#x2F;popper.js@1.12.5&#x2F;dist&#x2F;umd&#x2F;popper.js" integrity="sha384-KlVcf2tswD0JOTQnzU4uwqXcbAy57PvV48YUiLjqpk/MJ2wExQhg9tuozn5A1iVw" crossorigin="anonymous"&gt;&lt;/script&gt;
+                &lt;script src="https:&#x2F;&#x2F;unpkg.com&#x2F;bootstrap-material-design@4.0.0-beta.3&#x2F;dist&#x2F;js&#x2F;bootstrap-material-design.js" integrity="sha384-hC7RwS0Uz+TOt6rNG8GX0xYCJ2EydZt1HeElNwQqW+3udRol4XwyBfISrNDgQcGA" crossorigin="anonymous"&gt;&lt;/script&gt;
+              </code></pre>
+              <p>Note, here is where the beta docs are incorrect as you still need the plugin tether and snackbar adn they get imported-loaded before your bsm-js import entry.</p>
+              <pre><code>
+                &lt;script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"&gt;&lt;/script&gt;
+
+              </code></pre>
+              <p>And, of course, snackbar is not CDN'd yet so you have to download it or use the copy in this template.</p>
+              <p>Now on to the stuff that is docs specific.</p>&gt;
+              <h4 id="dsquared-specific">DSquared Specific</h4>
+              <p>The stickfill polyfill to get the fixed elements is stablized and although it's not CDN'd you can use the copy in this template.</p>
+              <p>Tocbot,plugin that auot generates the toc,  can be obtained from the following CDN urls</p>
+              <p>Tocbot css</p>
+              <pre><code>
+                &lt;link rel="stylesheet" href="https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;tocbot&#x2F;3.0.5&#x2F;tocbot.css"&gt;
+
+              </code></pre>
+              <p>Tocbot js</p>
+              <pre><code>
+                &lt;script src="https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;tocbot&#x2F;3.0.5&#x2F;tocbot.min.js"&gt;&lt;/script&gt;
+
+              </code></pre>
+              <p>For jstree, you need the following CDN urls:</p>
+              <p>Jstree css</p>
+              <pre><code>
+                &lt;link rel="stylesheet" href="&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;jstree&#x2F;3.3.3&#x2F;themes&#x2F;default&#x2F;style.min.css" /&gt;
+
+              </code></pre>
+              <p>Jstree js</p>
+              <pre><code>
+                &lt;script src="&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;jstree&#x2F;3.3.3&#x2F;jstree.min.js">&lt;/script&gt;
+
+              </code></pre>
+              <p>Prism is not CDN'd, see the extras folder at root for the complete prism stuff including all the themes, plugins, and language components. Use my example with this DSquared template as I loaded the common prism plugins that youu might use.</p>
+            </section>
+          </div>
+
+
+
+
+        </main>
+
+       </div><!-- ./row flex-xl-nowrap -->
+       <div class="row flex-xl-nowrap">
+         <footer class="bd-footer text-muted mx-auto text-center">
+               <div class=" p-3 p-md-5">
+
+     <p>&copy;2017 all rights reserved. Designed and built by <a href="https://twitter.com/fredgrott" target="_blank" >@fredgrott</a>.</p>
+
+   </div>
+ </footer>
+       </div>
+    </div><!-- ./container -->
+
+    <!-- Google Analytics -->
+
+
+    <!-- js goes here to make page load faster, order is:
+
+                  1. jquery
+                  2. BSM deps and BS deps, popper snackbarjs and tether
+                  3. BSM
+                  4. 3rd party jqueery plugins
+                  5. viewport bug js
+                  6  init js file
+       -->
+     <script src="assets/js/core/jquery-3.2.1.js"></script>
+     <script src="assets/js/core/popper.min.js"></script>
+     <script src="assets/js/core/snackbar.min.js"></script>
+     <script src="assets/js/core/tether.min.js"></script>
+     <script src="assets/js/core/bootstrap-material-design.js"></script>
+     <!-- BSM docs example shows this BS dep workaround coming after the bs js import -->
+     <script src="assets/js/core/ie10-viewport-bug-workaround.js"></script>
+
+     <script src="assets/js/vendors/stickyfill/stickyfill.js"></script>
+     <script src="assets/js/vendors/jstree/jstree.js"></script>
+     <script src="assets/js/vendors/tocbot/tocbot.js"></script>
+
+     <!-- prism -->
+     <script src="assets/js/vendors/prism/clipboard/clipboard.js"></script>
+     <script src="assets/js/vendors/prism/prism.js"></script>
+     <script src="assets/js/vendors/prism/prism-toolbar.js"></script>
+     <script src="assets/js/vendors/prism/prism-autoloader.js"></script>
+     <script src="assets/js/vendors/prism/prism-copy-to-clipboard.js"></script>
+     <script src="assets/js/vendors/prism/prism-custom-class.js"></script>
+     <script src="assets/js/vendors/prism/prism-line-highlight.js"></script>
+     <script src="assets/js/vendors/prism/prism-line-numbers.js"></script>
+     <script src="assets/js/vendors/prism/prism-show-language.js"></script>
+     <script src="assets/js/vendors/prism/prism-unescaped-markup.js"></script>
+     <script src="assets/js/init.js"></script>
+
+  </body>
+</html>
